@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Project1_it21878</string>
+    <string name="userid_hint">user000000</string>
+    <string name="subButton">SUBMISSION</string>
+    <string name="nextButton">NEXT</string>
+    <string name="longlat_hint">184.544 or -47.98</string>
+</resources>
