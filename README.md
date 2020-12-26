@@ -1,2 +1,2 @@
 # Mobile-app-project
-Firsy project of mobile apps class
+First project of mobile apps class
