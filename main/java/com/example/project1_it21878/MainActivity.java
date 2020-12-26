@@ -28,15 +28,17 @@ public class MainActivity extends AppCompatActivity {
                 Record record = new Record(userId,longitude,latitude);
                 long id = dbHelper.insertRecord(record);
                 Toast.makeText(MainActivity.this, id+"", Toast.LENGTH_SHORT).show();
+                if(id == -1){
+                    Toast.makeText(MainActivity.this, "Username taken", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.nextButton1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
-                //finish();
             }
         });
 

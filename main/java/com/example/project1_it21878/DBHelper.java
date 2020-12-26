@@ -52,11 +52,11 @@ public class DBHelper extends SQLiteOpenHelper {
         return id;
     }
 
-    public Cursor selectAll(){
-        return this.getReadableDatabase().query(TABLE_NAME,null,null,null,null,null,null);
+    public Cursor selectRecordByUserId(String id){
+        return this.getReadableDatabase().query(TABLE_NAME,null,FIELD_2+"=?",new String[]{id},null,null,null);
     }
 
-    public Cursor selectRecordByUserId(String id){
-        return this.getReadableDatabase().query(TABLE_NAME,null,FIELD_2+"=?",new String[]{id+""},null,null,null);
+    public Cursor selectRecordByIdAndDt(String id, String dt){
+        return this.getReadableDatabase().query(TABLE_NAME,null,FIELD_2+"=? AND "+FIELD_5+"=?",new String[]{id,dt},null,null,null);
     }
 }
