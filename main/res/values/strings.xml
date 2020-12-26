@@ -4,4 +4,5 @@
     <string name="subButton">SUBMISSION</string>
     <string name="nextButton">NEXT</string>
     <string name="longlat_hint">184.544 or -47.98</string>
+    <string name="searchUserId">SEARCH ID</string>
 </resources>
