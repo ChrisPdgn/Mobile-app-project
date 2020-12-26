@@ -54,7 +54,13 @@ public class SecondActivity extends AppCompatActivity {
                     Toast.makeText(SecondActivity.this, "Insert at least a user id to continue", Toast.LENGTH_LONG).show();
                 } else {
                     Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
-                    Cursor cursor = dbHelper.selectRecordByIdAndDt(userId, selectedDt);
+                    Cursor cursor;
+                    if (selectedDt == null){
+                        cursor = dbHelper.selectRecordByUserId(userId);
+                    }else {
+                        cursor = dbHelper.selectRecordByIdAndDt(userId, selectedDt);
+                    }
+
                     String cursorData = "";
                     if (cursor.moveToFirst()) {
                         do {

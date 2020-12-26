@@ -44,6 +44,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public long insertRecord(Record record){
         ContentValues values = new ContentValues();
+        values.put(FIELD_1, (byte[]) null);
         values.put(FIELD_2,record.getUserId());
         values.put(FIELD_3,record.getLongitude());
         values.put(FIELD_4, record.getLatitude());

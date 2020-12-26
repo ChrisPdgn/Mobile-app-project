@@ -20,7 +20,8 @@ public class ThirdActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String cursorData = intent.getStringExtra("cursorData");
-        
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(cursorData);
     }
 
 

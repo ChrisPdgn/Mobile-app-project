@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 public class UsersCursorAdapter extends CursorAdapter {
 
     public UsersCursorAdapter(Context context, Cursor c) {
@@ -24,11 +26,7 @@ public class UsersCursorAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         TextView td = (TextView)view.findViewById(R.id.timestampTV);
-
-        //String user = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.FIELD_2));
         String timestamp = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.FIELD_5));
-
-        //userId.setText(user);
         td.setText(timestamp);
     }
 }
